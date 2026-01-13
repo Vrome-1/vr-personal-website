@@ -10,7 +10,7 @@ interface Extracurricular {
   position: string
   duration: string
   location?: string
-  description: string
+  description?: string
   achievements: string[]
 }
 
