@@ -12,43 +12,41 @@ export const personalInfo = {
 
 // Skills organized by categories
 export const skills = {
-  languages: [
-    { name: "Java", level: 90 },
-    { name: "JavaScript", level: 95 },
-    { name: "C++", level: 80 },
-    { name: "SQL", level: 85 },
-    { name: "Python", level: 90 },
-    { name: "MATLAB", level: 75 },
-    { name: "HTML", level: 95 },
-    { name: "CSS", level: 90 },
-    { name: "MIPS Assembly", level: 70 },
-    { name: "Verilog", level: 65 },
-    { name: "Dart", level: 80 }
-  ],
-  frameworks: [
-    { name: "Node.js", level: 85 },
-    { name: "React", level: 95 },
-    { name: "Django", level: 80 },
-    { name: "REST APIs", level: 90 },
-    { name: "Streamlit", level: 75 },
-    { name: "Flutter", level: 80 },
-    { name: "Tailwind CSS", level: 90 }
-  ],
-  tools: [
-    { name: "AWS", level: 75 },
-    { name: "PyTorch", level: 70 },
-    { name: "Terraform", level: 65 },
-    { name: "Docker", level: 80 },
-    { name: "Git", level: 95 },
-    { name: "MySQL", level: 85 },
-    { name: "Pandas", level: 80 },
-    { name: "Matplotlib", level: 75 },
-    { name: "VS Code", level: 95 },
-    { name: "VADER", level: 70 },
-    { name: "MongoDB", level: 75 },
-    { name: "Unity", level: 60 },
-    { name: "Quest", level: 55 }
-  ]
+languages: [
+{ name: "Java", level: 90 },
+{ name: "JavaScript", level: 95 },
+{ name: "C++", level: 80 },
+{ name: "SQL", level: 85 },
+{ name: "Python", level: 90 },
+{ name: "MATLAB", level: 75 },
+{ name: "HTML", level: 95 },
+{ name: "CSS", level: 90 },
+{ name: "MIPS Assembly Language", level: 70 }
+],
+frameworks: [
+{ name: "Node.js", level: 85 },
+{ name: "React", level: 95 },
+{ name: "Django", level: 80 },
+{ name: "REST APIs", level: 90 },
+{ name: "Streamlit", level: 75 },
+{ name: "Flutter", level: 80 },
+{ name: "Tailwind CSS", level: 90 },
+{ name: "Pandas", level: 85 }
+],
+tools: [
+{ name: "Git", level: 95 },
+{ name: "Linux", level: 85 },
+{ name: "AWS", level: 75 },
+{ name: "PyTorch", level: 70 },
+{ name: "Terraform", level: 65 },
+{ name: "Docker", level: 80 },
+{ name: "MySQL", level: 85 },
+{ name: "VS Code", level: 95 },
+{ name: "Cursor", level: 90 },
+{ name: "MongoDB", level: 75 },
+{ name: "Unity", level: 60 },
+{ name: "Quest", level: 55 }
+]
 }
 
 // Education information

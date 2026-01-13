@@ -82,7 +82,7 @@ const Hero = () => {
                   <h4 className="text-lg font-semibold text-white">Languages</h4>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {skills.languages.slice(0, 5).map((skill) => (
+                  {skills.languages.map((skill) => (
                     <span
                       key={skill.name}
                       className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30"
@@ -100,7 +100,7 @@ const Hero = () => {
                   <h4 className="text-lg font-semibold text-white">Frameworks & Libraries</h4>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {skills.frameworks.slice(0, 5).map((skill) => (
+                  {skills.frameworks.map((skill) => (
                     <span
                       key={skill.name}
                       className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30"
@@ -118,7 +118,7 @@ const Hero = () => {
                   <h4 className="text-lg font-semibold text-white">Tools & Technologies</h4>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {skills.tools.slice(0, 5).map((skill) => (
+                  {skills.tools.map((skill) => (
                     <span
                       key={skill.name}
                       className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30"
