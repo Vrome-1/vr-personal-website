@@ -1,12 +1,11 @@
 // Personal information
 export const personalInfo = {
   name: "Vaani Rometra",
-  title: "Software Engineer", 
+  title: "Software Engineer",
   email: "vaanirometra@yahoo.com",
-  location: "San Francisco, CA",
-  bio: "Passionate full-stack developer with expertise in modern web technologies. I love creating efficient, scalable solutions and have experience building applications that serve thousands of users.",
-  avatar: "/images/avatar.jpg",
-  resume: "/resume.pdf",
+  location: "Champaign, IL",
+  bio: "Full-stack software engineer with expertise in building scalable web applications and data-driven solutions. Passionate about solving complex problems and delivering high-quality user experiences.",
+  avatar: "/images/avatar.JPG",
   linkedin: "https://linkedin.com/in/vrome",
   github: "https://github.com/Vrome-1",
 }
@@ -55,159 +54,248 @@ export const skills = {
 // Education information
 export const education = {
   degree: "Bachelor of Science",
-  major: "Computer Science", // Update with your actual major
-  minor: "Mathematics", // Update with your minor if applicable
-  university: "University Name", // Update with your university
-  graduationDate: "May 2024", // Update with your graduation date
-  location: "City, State", // University location
-  gpa: "3.8/4.0", // Optional - remove if you don't want to include
+  major: "Computer Science",
+  minor: "Data Science",
+  university: "University of Illinois Urbana-Champaign",
+  graduationDate: "May 2027",
+  location: "Champaign, IL",
+  gpa: "3.90/4.0",
   awards: [
     "Dean's List (Multiple Semesters)",
-    "Outstanding Computer Science Student Award",
-    "Hackathon Winner - Best Technical Implementation",
-    "Research Excellence Award"
+    "James Scholar"
   ],
   relevantCourses: [
-    "Data Structures & Algorithms",
-    "Software Engineering",
+    "Data Structures",
+    "Algorithms",
     "Database Systems",
-    "Computer Networks",
-    "Machine Learning",
-    "Web Development",
-    "Operating Systems",
     "Computer Architecture",
-    "Artificial Intelligence",
-    "Mobile Application Development"
+    "Linear Algebra"
   ]
 }
 
-// Work experience (most recent first)
+// Work experience
 export const experience = [
   {
     id: 1,
-    company: "Current Company Name",
-    position: "Your Job Title",
-    duration: "Start Date - Present", // e.g., "2022 - Present"
-    description: "Brief description of your role and responsibilities. What did you work on?",
-    technologies: ["Tech1", "Tech2", "Tech3", "Tech4"], // Technologies you used
+    company: "State Farm",
+    position: "Software Engineer Intern",
+    duration: "May 2025 - Aug 2025",
+    location: "Bloomington, IL",
+    description:
+      "Designed and deployed cloud-native data infrastructure to support large-scale analytics and machine learning workloads.",
+    technologies: [
+      "AWS S3",
+      "AWS Glue",
+      "AWS Redshift",
+      "AWS Step Functions",
+      "PySpark",
+      "Python",
+      "ETL Pipelines",
+      "Parquet"
+    ],
     achievements: [
-      "Specific achievement with measurable impact",
-      "Another key accomplishment",
-      "Leadership or mentoring experience",
-      "Any awards or recognitions"
+      "Designed and deployed automated AWS cloud-native ETL pipelines processing 100M+ records into a Parquet-based data lake, improving processing efficiency by 70%",
+      "Built secure, high-throughput pipelines for real-time analytics and ML feature generation, reducing data costs by 40% and tripling data access speed",
+      "Centralized catastrophe event data across analytics and ML pipelines, improving data quality and enabling faster, organization-wide data-driven decision-making"
     ]
   },
   {
     id: 2,
-    company: "Previous Company Name",
-    position: "Previous Job Title",
-    duration: "Start Date - End Date", // e.g., "2020 - 2022"
-    description: "Description of this role and what you accomplished.",
-    technologies: ["Different", "Technologies", "You", "Used"],
+    company: "University of Illinois Urbana-Champaign",
+    position: "Undergraduate Researcher – Machine Learning",
+    duration: "Dec 2025 - Present",
+    location: "Champaign, IL",
+    description:
+      "Conducting machine learning research in the Shukla Group focused on predicting protein movement and structural conformations.",
+    technologies: [
+      "Machine Learning",
+      "Deep Learning",
+      "Python",
+      "Scientific Computing"
+    ],
     achievements: [
-      "Achievement 1",
-      "Achievement 2",
-      "Achievement 3"
+      "Applying machine learning models to predict protein movement and shape, enabling improved understanding of protein dynamics and conformational changes",
+      "Analyzing large-scale biological and simulation datasets to extract meaningful features for model training and evaluation",
+      "Collaborating within the Shukla Group at UIUC to support research in computational biology and molecular dynamics"
     ]
-  }
-  // Add more experience objects as needed
-]
-
-// Projects to showcase
-export const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
-    image: "/images/project1.jpg",
-    technologies: ["Next.js", "Stripe", "Prisma", "PostgreSQL"],
-    github: "https://github.com/yourusername/ecommerce",
-    demo: "https://ecommerce-demo.vercel.app",
-    featured: true // This will make it span 2 columns
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "Collaborative project management tool with real-time updates and team features.",
-    image: "/images/project2.jpg",
-    technologies: ["React", "Socket.io", "Express", "MongoDB"],
-    github: "https://github.com/yourusername/taskapp",
-    demo: "https://taskapp-demo.vercel.app",
-    featured: true // Another featured project
   },
   {
     id: 3,
-    title: "AI-Powered Chat Application",
-    description: "Real-time chat app with AI-powered responses and sentiment analysis.",
-    image: "/images/project3.jpg",
-    technologies: ["React", "Node.js", "Socket.io", "OpenAI API"],
-    github: "https://github.com/yourusername/chat-ai",
-    demo: "https://chat-ai-demo.vercel.app",
-    featured: false
+    company: "Peoria Park District",
+    position: "IT Intern",
+    duration: "May 2023 - July 2023",
+    location: "Peoria, IL",
+    description:
+      "Provided hands-on IT support and networking assistance for community events and daily office operations.",
+    achievements: [
+      "Configured and tested Wi-Fi access points to ensure reliable, high-speed connectivity for community events with 100+ participants",
+      "Collaborated with a team of 3 to resolve IT support tickets, minimizing downtime and restoring critical services",
+      "Installed and terminated Ethernet cables under supervision to enable secure and stable network connections"
+    ]
   },
-  // ... add your other 6 projects here
   {
     id: 4,
-    title: "Weather Dashboard",
-    description: "Beautiful weather app with location-based forecasts and interactive maps.",
-    image: "/images/project4.jpg",
-    technologies: ["React", "OpenWeather API", "Chart.js"],
-    github: "https://github.com/yourusername/weather",
-    demo: "https://weather-demo.vercel.app",
+    company: "Kumon Math and Reading Center of Peoria",
+    position: "Teaching Assistant and Grader",
+    duration: "March 2022 - Aug 2022",
+    location: "Peoria, IL",
+    description:
+      "Supported student learning and academic development in math and reading.",
+    achievements: [
+      "Guided and motivated young and beginner students in math and reading comprehension",
+      "Assisted with grading and individualized academic support to improve student performance"
+    ]
+  }
+];
+
+// Projects
+export const projects = [
+  {
+    id: 1,
+    title: "UIUC Minor Recommender",
+    description:
+      "Full-stack academic recommendation system that analyzes student interests, completed coursework, and UIUC curriculum data to generate personalized minor recommendations. Built to replace manual catalog searches with an intelligent, data-driven workflow, the platform integrates labor-market insights and real course constraints to help 200+ students make informed academic decisions.",
+    image: "/images/mr.png",
+    technologies: [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "SQL"
+    ],
+    github: "https://github.com/Vrome-1/UIUC-Minor-Recommender",
+    demo: "https://drive.google.com/file/d/137P7zjIVmcpKXDKz9fk5Y3TP8A78TJKv/view?usp=sharing",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Project Pink",
+    description:
+      "Award-winning (1st place at Code Ada Hackathon), retro-futuristic scrollytelling web experience that visualizes the history and impact of gendered pricing through immersive storytelling. The project transforms complex social and economic data into an interactive timeline using Apple-style scroll animations, parallax effects, and canvas-driven visuals to educate users on the evolution and persistence of the Pink Tax.",
+    image: "/images/pink.png",
+    technologies: [
+      "JavaScript",
+      "Vite",
+      "HTML5",
+      "CSS3",
+      "Canvas API",
+      "Node.js",
+      "YOLOv8"
+    ],
+    demo: "https://drive.google.com/file/d/1a3qzFto0Cgzw1n2JBxhii3Fa1ERz93wT/view?usp=sharing",
     featured: false
+  },
+  {
+    id: 3,
+    title: "Connect Care",
+    description:
+      "Mental health support platform built during a hackathon to foster connection and reduce isolation among patients. The application enables peer-to-peer community forums, AI-powered conversational support using NLP, and health buddy matching to create safe, empathetic spaces for sharing experiences and receiving emotional support in real time via REST APIs.",
+    image: "/images/cc.png",
+    technologies: [
+      "Python",
+      "Streamlit",
+      "Natural Language Processing (NLP)",
+      "Firebase",
+      "REST APIs"
+    ],
+    github: "https://github.com/Vrome-1/care-connect2",
+    demo: "https://drive.google.com/file/d/1jciXck1sXie-y-3sDCGy_1nA-rDwkCOE/view?usp=sharing",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "EcoScore",
+    description:
+      "Data-intensive sustainability scoring platform that evaluates user lifestyle habits against national benchmarks to generate personalized EcoScores, peer comparisons, and dynamically generated recommendations. The system supports historical habit tracking, ML-based similarity matching, and trigger-driven data invalidation, enabling users to visualize progress over time and receive accurate, continuously refreshed sustainability insights.",
+    image: "/images/eco.png",
+    technologies: [
+      "Python",
+      "SQL",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Django REST Framework",
+      "JWT Authentication",
+      "Hugging Face",
+    ],
+    featured: false
+  }
+];
+
+
+export const extracurriculars = [
+  {
+    id: 1,
+    organization: "OTCR Consulting",
+    website: "https://www.otcrconsulting.com",
+    position: "DevOps Engineer",
+    duration: "Sep 2025 - Present",
+    achievements: [
+      "Developed and scaled an internal dashboard used by 80+ members across web and mobile platforms",
+      "Implemented CI/CD pipelines and automated AWS infrastructure to improve deployment speed and reliability",
+      "Built role-based authentication, document management, and notification systems to enhance security and usability"
+    ]
+  },
+  {
+    id: 2,
+    organization: "Disruption Lab at Gies",
+    website: "https://giesgroups.illinois.edu/disruptionlab/home/",
+    position: "Project Manager",
+    duration: "Feb 2025 - Present",
+    achievements: [
+      "Built scalable multiplayer VR systems in Unity supporting 10+ concurrent users",
+      "Implemented a high-fidelity VR model of Gies with optimized rendering and networking",
+      "Led agile testing and iteration cycles to deliver a production-ready VR prototype within 12 weeks",
+      "Integrated an AI-driven avatar for interactive VR experiences"
+    ]
+  },
+  {
+    id: 3,
+    organization: "EntreCORPS",
+    website: "https://giesgroups.illinois.edu/entrecorps/home/",
+    position: "Consultant",
+    duration: "Feb 2025 - Present",
+    achievements: [
+      "Conducted competitive and market research for an AI cervical screening startup",
+      "Delivered weekly insights on product positioning and grant applications",
+      "Provided UI integration recommendations to improve user experience and market entry"
+    ]
+  },
+  {
+    id: 4,
+    organization: "Hindu YUVA",
+    website: "https://www.instagram.com/hindu.yuva.uiuc/?hl=en",
+    position: "Event Committee Member",
+    duration: "Jan 2025 - Present",
+    achievements: [
+      "Built partnerships with community, religious, and media organizations",
+      "Planned and executed a cultural program with 300+ attendees",
+      "Coordinated logistics and teamwork for large-scale events"
+    ]
   },
   {
     id: 5,
-    title: "Portfolio Website",
-    description: "Responsive portfolio website built with Next.js and Tailwind CSS.",
-    image: "/images/project5.jpg",
-    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/yourusername/portfolio",
-    demo: "https://portfolio-demo.vercel.app",
-    featured: false
+    organization: "Women in Computer Science",
+    website: "https://wcs.illinois.edu",
+    position: "Mentoring Committee Member",
+    duration: "Sep 2024 - Present",
+    achievements: [
+      "Led a mentorship program with 50+ participants focused on peer learning",
+      "Organized career panels and technical workshops",
+      "Participated in Chicago tech outreach trip networking with tech and finance leaders"
+    ]
   },
-  // Add your remaining projects...
   {
     id: 6,
-    title: "Mobile Fitness App",
-    description: "Cross-platform fitness tracking app with workout plans and progress analytics.",
-    image: "/images/project6.jpg",
-    technologies: ["Flutter", "Dart", "Firebase"],
-    github: "https://github.com/yourusername/fitness-app",
-    demo: "https://fitness-app-demo.vercel.app",
-    featured: false
-  },
-  {
-    id: 7,
-    title: "Data Visualization Dashboard",
-    description: "Interactive dashboard for visualizing complex datasets with multiple chart types.",
-    image: "/images/project7.jpg",
-    technologies: ["Python", "Streamlit", "Pandas", "Plotly"],
-    github: "https://github.com/yourusername/data-viz",
-    demo: "https://data-viz-demo.vercel.app",
-    featured: false
-  },
-  {
-    id: 8,
-    title: "IoT Smart Home System",
-    description: "IoT system for monitoring and controlling smart home devices.",
-    image: "/images/project8.jpg",
-    technologies: ["Python", "Raspberry Pi", "MQTT", "React"],
-    github: "https://github.com/yourusername/smart-home",
-    demo: "https://smart-home-demo.vercel.app",
-    featured: false
-  },
-  {
-    id: 9,
-    title: "Blockchain Voting System",
-    description: "Secure voting platform using blockchain technology for transparency.",
-    image: "/images/project9.jpg",
-    technologies: ["Solidity", "Web3.js", "React", "Ethereum"],
-    github: "https://github.com/yourusername/blockchain-voting",
-    demo: "https://blockchain-voting-demo.vercel.app",
-    featured: false
+    organization: "Innovation Living Learning Community",
+    website: "https://housing.illinois.edu/Living-Learning-Communities/Innovation",
+    position: "Member",
+    duration: "Aug 2024 - May 2025",
+    achievements: [
+      "Won 1st Place at the Idea Fair out of 80+ teams",
+      "Pitched an AI-powered accessibility app for elderly smartphone users",
+      "Secured $1,500 in funding for the project"
+    ]
   }
-]
-
-
-
+];

@@ -34,9 +34,19 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Project Image/Preview */}
-      <div className="relative h-48 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-blue-500 to-indigo-600 transition-transform duration-500 group-hover:scale-110"></div>
-        
+      <div className="relative h-56 md:h-64 lg:h-72 overflow-hidden">
+        {/* Project Image */}
+        {project.image && (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        )}
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/40 via-blue-500/30 to-indigo-600/40 transition-transform duration-500 group-hover:scale-110"></div>
+
         {/* Animated background pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
@@ -45,10 +55,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center p-6">
-          <div className="text-center text-white">
-            <motion.h3 
-              className="text-xl md:text-2xl font-bold mb-3"
+        <div className="absolute inset-0 flex items-center justify-center p-3">
+          <div className="text-center text-white w-full max-w-4xl px-2">
+            <motion.h3
+              className="text-2xl md:text-3xl font-bold mb-4"
               animate={{ scale: isHovered ? 1.05 : 1 }}
               transition={{ duration: 0.2 }}
             >
@@ -56,30 +66,34 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             </motion.h3>
             
             {/* Action Buttons */}
-            <motion.div 
+            <motion.div
               className="flex justify-center space-x-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isHovered ? 1 : 0.8, y: isHovered ? 0 : 10 }}
               transition={{ duration: 0.3 }}
             >
-              <a
-                href={project.github}
-                className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View Source Code"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href={project.demo}
-                className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View Live Demo"
-              >
-                <ExternalLink size={20} />
-              </a>
+              {project.github && (
+                <a
+                  href={project.github}
+                  className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="View Source Code"
+                >
+                  <Github size={20} />
+                </a>
+              )}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="View Live Demo"
+                >
+                  <ExternalLink size={20} />
+                </a>
+              )}
             </motion.div>
           </div>
         </div>
@@ -97,7 +111,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2">
-          {project.technologies.slice(0, 4).map((tech, techIndex) => (
+          {project.technologies.map((tech, techIndex) => (
             <span
               key={tech}
               className="px-3 py-1 rounded-full text-xs font-semibold border bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 border-purple-200 hover:shadow-md transition-all duration-200"

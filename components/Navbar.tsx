@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react'
+import { personalInfo } from '@/lib/data'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -55,15 +56,21 @@ const Navbar = () => {
 
           {/* Social Links */}
           <div className="hidden md:flex space-x-4">
-            <a href="https://github.com" className="text-gray-700 hover:text-purple-600 transition-colors">
-              <Github size={20} />
-            </a>
-            <a href="https://linkedin.com" className="text-gray-700 hover:text-purple-600 transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="mailto:vaani@example.com" className="text-gray-700 hover:text-purple-600 transition-colors">
-              <Mail size={20} />
-            </a>
+            {personalInfo.github && (
+              <a href={personalInfo.github} className="text-gray-700 hover:text-purple-600 transition-colors">
+                <Github size={20} />
+              </a>
+            )}
+            {personalInfo.linkedin && (
+              <a href={personalInfo.linkedin} className="text-gray-700 hover:text-purple-600 transition-colors">
+                <Linkedin size={20} />
+              </a>
+            )}
+            {personalInfo.email && (
+              <a href={`mailto:${personalInfo.email}`} className="text-gray-700 hover:text-purple-600 transition-colors">
+                <Mail size={20} />
+              </a>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -97,15 +104,21 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="flex space-x-4 pt-4">
-                <a href="https://github.com" className="text-gray-700 hover:text-purple-600">
-                  <Github size={20} />
-                </a>
-                <a href="https://linkedin.com" className="text-gray-700 hover:text-purple-600">
-                  <Linkedin size={20} />
-                </a>
-                <a href="mailto:vaani@example.com" className="text-gray-700 hover:text-purple-600">
-                  <Mail size={20} />
-                </a>
+                {personalInfo.github && (
+                  <a href={personalInfo.github} className="text-gray-700 hover:text-purple-600">
+                    <Github size={20} />
+                  </a>
+                )}
+                {personalInfo.linkedin && (
+                  <a href={personalInfo.linkedin} className="text-gray-700 hover:text-purple-600">
+                    <Linkedin size={20} />
+                  </a>
+                )}
+                {personalInfo.email && (
+                  <a href={`mailto:${personalInfo.email}`} className="text-gray-700 hover:text-purple-600">
+                    <Mail size={20} />
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>

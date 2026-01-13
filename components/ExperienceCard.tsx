@@ -8,8 +8,9 @@ interface Experience {
   company: string
   position: string
   duration: string
+  location?: string
   description: string
-  technologies: string[]
+  technologies?: string[]
   achievements: string[]
 }
 
@@ -35,7 +36,15 @@ const ExperienceCard = ({ experience, index }: ExperienceCardProps) => {
           <h4 className="text-xl text-purple-600 font-semibold mb-2">
             {experience.company}
           </h4>
+
+          {experience.location && (
+            <div className="flex items-center text-gray-600 text-sm">
+              <MapPin size={16} className="mr-2" />
+              {experience.location}
+            </div>
+          )}
         </div>
+
         <div className="text-gray-600 flex items-center gap-4 mt-4 md:mt-0">
           <div className="flex items-center">
             <Calendar size={16} className="mr-2" />
@@ -60,19 +69,21 @@ const ExperienceCard = ({ experience, index }: ExperienceCardProps) => {
         </ul>
       </div>
 
-      <div>
-        <h5 className="font-semibold text-gray-900 mb-3">Technologies:</h5>
-        <div className="flex flex-wrap gap-2">
-          {experience.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
-            >
-              {tech}
-            </span>
-          ))}
+      {experience.technologies && experience.technologies.length > 0 && (
+        <div>
+          <h5 className="font-semibold text-gray-900 mb-3">Technologies:</h5>
+          <div className="flex flex-wrap gap-2">
+            {experience.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </motion.div>
   )
 }
